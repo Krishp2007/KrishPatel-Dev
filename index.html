@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Krish Patel — Computer Science undergraduate and backend developer. Skilled in Django, Flask, Python, Java, and building scalable web applications.">
+  <meta name="keywords" content="Krish Patel, Portfolio, Developer, Backend, Django, Flask, Python, Java, Computer Science">
+  <meta name="author" content="Krish Patel">
+  <meta name="theme-color" content="#07070d">
+  <title>Krish Patel — Backend Developer &amp; CS Undergraduate</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+</head>
+<body>
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-bracket">&lt;</span><span class="logo-name">Krish</span><span class="logo-bracket"> /&gt;</span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+        <a href="Patel_Krish_Resume.pdf" target="_blank" class="nav-cta">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          Resume
+        </a>
+      </div>
+      <div class="nav-hamburger" id="navHamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-content">
+
+        <p class="hero-greeting">Hello, I'm</p>
+        <h1 class="hero-name">Krish <span class="gradient-text">Patel</span></h1>
+
+        <p class="hero-title">
+          I build <span class="typed-text" id="typedText"></span><span class="cursor">|</span>
+        </p>
+
+        <p class="hero-description">
+          Computer Science undergraduate with a strong foundation in backend development
+          and database systems. Passionate about building scalable web applications and
+          solving real-world problems through efficient code.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+            View Projects
+          </a>
+          <a href="Patel_Krish_Resume.pdf" download class="btn btn-secondary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+            Download Resume
+          </a>
+        </div>
+
+
+      </div>
+    </div>
+
+    <div class="hero-scroll-indicator">
+      <div class="scroll-mouse"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ==================== ABOUT ==================== -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-content">
+
+        <div class="about-text reveal reveal-delay-2">
+          <span class="section-label">About Me</span>
+          <h2 class="section-title">Passionate about building<br><span class="gradient-text">impactful software</span></h2>
+
+          <p>
+            I'm a <strong>Computer Science &amp; Engineering</strong> undergraduate at
+            <strong>LJ Institute of Engineering and Technology</strong>, Ahmedabad.
+            I focus on backend development and creating data-driven applications
+            that solve real-world problems.
+          </p>
+
+          <p>
+            With hands-on experience in <strong>Django, Flask, and PostgreSQL</strong>,
+            I enjoy designing robust REST APIs and scalable systems. Beyond backend,
+            I work with the <strong>MERN stack</strong>, do <strong>data analysis</strong>, and build <strong>AI prediction models</strong>.
+          </p>
+
+          <div class="about-highlights">
+            <span class="highlight-tag"><span class="tag-icon">🎯</span> Backend Development</span>
+            <span class="highlight-tag"><span class="tag-icon">📊</span> Data Analysis</span>
+            <span class="highlight-tag"><span class="tag-icon">🤖</span> AI / ML</span>
+            <span class="highlight-tag"><span class="tag-icon">🌐</span> MERN Stack</span>
+            <span class="highlight-tag"><span class="tag-icon">🗄️</span> Database Design</span>
+            <span class="highlight-tag"><span class="tag-icon">🔗</span> REST APIs</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SKILLS ==================== -->
+  <section class="skills" id="skills">
+    <div class="container">
+      <div class="skills-header reveal">
+        <span class="section-label">Skills &amp; Expertise</span>
+        <h2 class="section-title">Technologies I <span class="gradient-text">work with</span></h2>
+        <p class="section-subtitle">
+          A curated set of tools and technologies I use to build robust, scalable applications.
+        </p>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Languages -->
+        <div class="skill-category cat-languages reveal reveal-delay-1">
+          <div class="skill-category-icon languages">💻</div>
+          <h3 class="skill-category-title">Languages</h3>
+          <div class="skill-tags">
+            <span class="skill-tag"><span class="tag-dot blue"></span> Java</span>
+            <span class="skill-tag"><span class="tag-dot blue"></span> Python</span>
+            <span class="skill-tag"><span class="tag-dot blue"></span> JavaScript</span>
+            <span class="skill-tag"><span class="tag-dot blue"></span> SQL</span>
+            <span class="skill-tag"><span class="tag-dot blue"></span> HTML / CSS</span>
+          </div>
+        </div>
+
+        <!-- Frameworks -->
+        <div class="skill-category cat-frameworks reveal reveal-delay-2">
+          <div class="skill-category-icon frameworks">⚡</div>
+          <h3 class="skill-category-title">Frameworks &amp; APIs</h3>
+          <div class="skill-tags">
+            <span class="skill-tag"><span class="tag-dot cyan"></span> Django</span>
+            <span class="skill-tag"><span class="tag-dot cyan"></span> Flask</span>
+            <span class="skill-tag"><span class="tag-dot cyan"></span> FastAPI</span>
+            <span class="skill-tag"><span class="tag-dot cyan"></span> REST APIs</span>
+            <span class="skill-tag"><span class="tag-dot cyan"></span> React.js</span>
+            <span class="skill-tag"><span class="tag-dot cyan"></span> Node.js</span>
+            <span class="skill-tag"><span class="tag-dot cyan"></span> Express.js</span>
+          </div>
+        </div>
+
+        <!-- Data & AI -->
+        <div class="skill-category cat-data reveal reveal-delay-3">
+          <div class="skill-category-icon data">📊</div>
+          <h3 class="skill-category-title">Data &amp; AI</h3>
+          <div class="skill-tags">
+            <span class="skill-tag"><span class="tag-dot purple"></span> Pandas</span>
+            <span class="skill-tag"><span class="tag-dot purple"></span> Matplotlib</span>
+            <span class="skill-tag"><span class="tag-dot purple"></span> Seaborn</span>
+            <span class="skill-tag"><span class="tag-dot purple"></span> Plotly</span>
+            <span class="skill-tag"><span class="tag-dot purple"></span> AI / ML</span>
+          </div>
+        </div>
+
+        <!-- Tools & Databases -->
+        <div class="skill-category cat-tools reveal reveal-delay-4">
+          <div class="skill-category-icon tools">🛠️</div>
+          <h3 class="skill-category-title">Tools &amp; Databases</h3>
+          <div class="skill-tags">
+            <span class="skill-tag"><span class="tag-dot green"></span> Git</span>
+            <span class="skill-tag"><span class="tag-dot green"></span> GitHub</span>
+            <span class="skill-tag"><span class="tag-dot green"></span> PostgreSQL</span>
+            <span class="skill-tag"><span class="tag-dot green"></span> MySQL</span>
+            <span class="skill-tag"><span class="tag-dot green"></span> MongoDB</span>
+            <span class="skill-tag"><span class="tag-dot green"></span> Maven</span>
+            <span class="skill-tag"><span class="tag-dot green"></span> Cloudinary</span>
+          </div>
+        </div>
+
+        <!-- Frontend -->
+        <div class="skill-category cat-frontend reveal reveal-delay-5">
+          <div class="skill-category-icon frontend">🎨</div>
+          <h3 class="skill-category-title">Frontend</h3>
+          <div class="skill-tags">
+            <span class="skill-tag"><span class="tag-dot orange"></span> HTML5</span>
+            <span class="skill-tag"><span class="tag-dot orange"></span> CSS3</span>
+            <span class="skill-tag"><span class="tag-dot orange"></span> JavaScript ES6+</span>
+            <span class="skill-tag"><span class="tag-dot orange"></span> React.js</span>
+            <span class="skill-tag"><span class="tag-dot orange"></span> Responsive Design</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PROJECTS ==================== -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <div class="projects-header reveal">
+        <span class="section-label">Featured Projects</span>
+        <h2 class="section-title">Things I've <span class="gradient-text">built</span></h2>
+        <p class="section-subtitle">
+          A selection of projects that showcase my development skills and problem-solving approach.
+        </p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1: LedgerX -->
+        <div class="project-card reveal reveal-delay-1">
+          <div class="project-number-badge">01</div>
+          <div class="project-content">
+            <h3 class="project-name">LedgerX</h3>
+            <p class="project-description">
+              A comprehensive point-of-sale and credit management application that digitizes
+              traditional paper ledgers for shopkeepers. Features an interactive analytics dashboard,
+              soft-delete archiving, dynamic search, and secure UPI deep-linking for automated
+              payment collection.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Django</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">PostgreSQL</span>
+              <span class="tech-tag">REST APIs</span>
+              <span class="tech-tag">Cloudinary</span>
+              <span class="tech-tag">JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Krishp2007" target="_blank" class="project-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                Source Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: DayFlow HRMS -->
+        <div class="project-card reveal reveal-delay-2">
+          <div class="project-number-badge">02</div>
+          <div class="project-content">
+            <h3 class="project-name">DayFlow HRMS</h3>
+            <p class="project-description">
+              A comprehensive Human Resource Management System automating employee attendance,
+              leave requests, and payroll processing. Features role-based access control with
+              Flask-Login, separating admin dashboards from employee self-service portals.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Flask</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">SQLAlchemy</span>
+              <span class="tech-tag">SQLite</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">HTML/CSS</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Krishp2007" target="_blank" class="project-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                Source Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: RevForce MotorSports -->
+        <div class="project-card reveal reveal-delay-3">
+          <div class="project-number-badge">03</div>
+          <div class="project-content">
+            <h3 class="project-name">RevForce MotorSports</h3>
+            <p class="project-description">
+              A console-based motorsports management system to orchestrate teams, drivers, races,
+              and sponsorships. Implements the DAO design pattern with custom-built Binary Search Tree
+              and HashMap data structures for optimized in-memory data operations.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Java</span>
+              <span class="tech-tag">JDBC</span>
+              <span class="tech-tag">SQL</span>
+              <span class="tech-tag">OOP</span>
+              <span class="tech-tag">Data Structures</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Krishp2007" target="_blank" class="project-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                Source Code
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== EDUCATION & CERTIFICATIONS ==================== -->
+  <section class="education" id="education">
+    <div class="container">
+      <div class="education-header reveal">
+        <span class="section-label">Background</span>
+        <h2 class="section-title">Education &amp; <span class="gradient-text">Certifications</span></h2>
+        <p class="section-subtitle">
+          My academic journey and professional certifications.
+        </p>
+      </div>
+
+      <div class="education-grid">
+        <div class="reveal reveal-delay-1">
+          <h3 class="education-column-title">
+            <span class="col-icon edu">🎓</span> Education
+          </h3>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-card">
+                <span class="timeline-date">Nov 2024 — Present</span>
+                <h4 class="timeline-title">B.Sc. Computer Science & Engineering</h4>
+                <p class="timeline-institution">LJ Institute of Engineering and Technology</p>
+                <p class="timeline-location">📍 Ahmedabad, India</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-card">
+                <span class="timeline-date">Mar 2022 — Mar 2024</span>
+                <h4 class="timeline-title">Higher Secondary Education (Science)</h4>
+                <p class="timeline-institution">New Meghdoot VidhyaVihar</p>
+                <p class="timeline-location">📍 Ahmedabad, India</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal reveal-delay-2">
+          <h3 class="education-column-title">
+            <span class="col-icon cert">🏆</span> Certifications
+          </h3>
+          <div class="cert-list">
+            <div class="cert-card">
+              <div class="cert-icon">📘</div>
+              <div class="cert-info">
+                <h4 class="cert-name">Introduction to HTML, CSS & JavaScript</h4>
+                <p class="cert-issuer">IBM</p>
+              </div>
+            </div>
+            <div class="cert-card">
+              <div class="cert-icon">☕</div>
+              <div class="cert-info">
+                <h4 class="cert-name">Inheritance and Data Structures in Java</h4>
+                <p class="cert-issuer">University of Pennsylvania</p>
+              </div>
+            </div>
+            <div class="cert-card">
+              <div class="cert-icon">🎯</div>
+              <div class="cert-info">
+                <h4 class="cert-name">Introduction to Java</h4>
+                <p class="cert-issuer">LearnQuest</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT ==================== -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-header reveal">
+        <span class="section-label">Get In Touch</span>
+        <h2 class="section-title">Let's <span class="gradient-text">connect</span></h2>
+        <p class="section-subtitle">
+          Have a question, a project idea, or just want to say hi? I'd love to hear from you.
+        </p>
+      </div>
+
+      <div class="contact-cards-centered reveal reveal-delay-1">
+          <div class="contact-cards">
+            <a href="mailto:krishpatel2136@gmail.com" class="contact-card" id="contactEmail">
+              <div class="contact-card-icon email">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              </div>
+              <div class="contact-card-content">
+                <span class="contact-card-label">Email</span>
+                <span class="contact-card-value">krishpatel2136@gmail.com</span>
+              </div>
+              <span class="contact-card-arrow">→</span>
+            </a>
+
+            <a href="https://github.com/Krishp2007" target="_blank" class="contact-card" id="contactGithub">
+              <div class="contact-card-icon github">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </div>
+              <div class="contact-card-content">
+                <span class="contact-card-label">GitHub</span>
+                <span class="contact-card-value">Krishp2007</span>
+              </div>
+              <span class="contact-card-arrow">→</span>
+            </a>
+
+            <a href="https://www.linkedin.com/in/krishpatel2136" target="_blank" class="contact-card" id="contactLinkedin">
+              <div class="contact-card-icon linkedin">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </div>
+              <div class="contact-card-content">
+                <span class="contact-card-label">LinkedIn</span>
+                <span class="contact-card-value">Krish Patel</span>
+              </div>
+              <span class="contact-card-arrow">→</span>
+            </a>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-text">Designed & built by <span>Krish Patel</span> &copy; 2025</p>
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-social">
+        <a href="https://github.com/Krishp2007" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/krishpatel2136" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="mailto:krishpatel2136@gmail.com" aria-label="Email">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
