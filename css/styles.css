@@ -443,16 +443,6 @@ img { max-width: 100%; display: block; }
   display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 28px;
 }
 
-.project-number-badge {
-  padding: 16px 28px;
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--accent-blue);
-  border-bottom: 1px solid var(--border-subtle);
-  background: rgba(59, 130, 246, 0.04);
-}
-
 .project-card {
   background: var(--bg-card); border: 1px solid var(--border-subtle);
   border-radius: 20px; overflow: hidden; transition: var(--transition-smooth);
@@ -574,6 +564,13 @@ img { max-width: 100%; display: block; }
 }
 .cert-name { font-size: 0.95rem; font-weight: 600; margin-bottom: 4px; }
 .cert-issuer { font-size: 0.82rem; color: var(--text-muted); }
+.cert-link {
+  margin-left: auto; flex-shrink: 0;
+  font-size: 0.82rem; font-weight: 500;
+  color: var(--accent-blue); transition: var(--transition-fast);
+  white-space: nowrap;
+}
+.cert-link:hover { color: var(--accent-cyan); transform: translateX(4px); }
 
 /* ---------- CONTACT ---------- */
 .contact { padding: var(--section-padding); position: relative; }

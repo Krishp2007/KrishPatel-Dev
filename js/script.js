@@ -177,7 +177,7 @@ class Navbar {
           }
         });
       },
-      { threshold: 0.3, rootMargin: '-80px 0px -50% 0px' }
+      { threshold: 0.15, rootMargin: '-80px 0px -20% 0px' }
     );
     this.sections.forEach((section) => observer.observe(section));
   }
@@ -229,4 +229,8 @@ document.addEventListener('DOMContentLoaded', () => {
   new Navbar();
   initSmoothScroll();
   initContactForm();
+
+  // Dynamic year
+  const yearEl = document.getElementById('currentYear');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
 });
