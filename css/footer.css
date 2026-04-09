@@ -1,0 +1,16 @@
+/* ---------- FOOTER ---------- */
+.footer { padding: 48px 0; border-top: 1px solid var(--border-subtle); position: relative; }
+.footer .container { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 24px; }
+.footer-text { font-size: 0.9rem; color: var(--text-muted); }
+.footer-text span { color: var(--accent-blue); font-weight: 600; }
+.footer-links { display: flex; gap: 24px; }
+.footer-links a { font-size: 0.9rem; color: var(--text-muted); transition: var(--transition-fast); }
+.footer-links a:hover { color: var(--accent-blue); }
+.footer-social { display: flex; gap: 12px; }
+.footer-social a {
+  width: 38px; height: 38px; display: flex; align-items: center; justify-content: center;
+  border-radius: 10px; background: var(--bg-glass); border: 1px solid var(--border-subtle);
+  color: var(--text-muted); transition: var(--transition-smooth);
+}
+.footer-social a:hover { color: var(--accent-blue); border-color: var(--border-hover); transform: translateY(-3px); }
+.footer-social a svg { width: 18px; height: 18px; }

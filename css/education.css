@@ -1,0 +1,70 @@
+/* ---------- EDUCATION ---------- */
+.education { padding: var(--section-padding); position: relative; }
+.education-header { text-align: center; margin-bottom: 64px; }
+.education-header .section-subtitle { margin: 0 auto; }
+
+.education-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+
+.education-column-title {
+  font-size: 1.2rem; font-weight: 700; margin-bottom: 24px;
+  display: flex; align-items: center; gap: 10px;
+}
+.education-column-title .col-icon {
+  width: 36px; height: 36px; border-radius: 10px;
+  display: flex; align-items: center; justify-content: center; font-size: 1.1rem;
+}
+.education-column-title .col-icon.edu { background: rgba(59, 130, 246, 0.12); }
+.education-column-title .col-icon.cert { background: rgba(139, 92, 246, 0.12); }
+
+.timeline { position: relative; padding-left: 32px; }
+.timeline::before {
+  content: ''; position: absolute; top: 8px; left: 7px;
+  width: 2px; height: calc(100% - 16px);
+  background: linear-gradient(to bottom, var(--accent-blue), transparent);
+  border-radius: 2px;
+}
+.timeline-item { position: relative; padding-bottom: 32px; }
+.timeline-item:last-child { padding-bottom: 0; }
+.timeline-dot {
+  position: absolute; left: -30px; top: 6px; width: 12px; height: 12px;
+  border-radius: 50%; background: var(--bg-primary);
+  border: 3px solid var(--accent-blue); z-index: 1;
+}
+.timeline-item:first-child .timeline-dot {
+  background: var(--accent-blue); box-shadow: 0 0 12px rgba(59, 130, 246, 0.4);
+}
+
+.timeline-card {
+  padding: 24px; background: var(--bg-card);
+  border: 1px solid var(--border-subtle); border-radius: 16px;
+  transition: var(--transition-smooth);
+}
+.timeline-card:hover { border-color: var(--border-hover); background: var(--bg-card-hover); transform: translateX(4px); }
+.timeline-date { font-size: 0.8rem; font-weight: 500; color: var(--accent-blue); font-family: var(--font-mono); margin-bottom: 8px; }
+.timeline-title { font-size: 1.05rem; font-weight: 700; margin-bottom: 4px; }
+.timeline-institution { font-size: 0.9rem; color: var(--text-secondary); }
+.timeline-location { font-size: 0.8rem; color: var(--text-muted); margin-top: 4px; display: flex; align-items: center; gap: 4px; }
+
+.cert-list { display: flex; flex-direction: column; gap: 16px; }
+.cert-card {
+  padding: 20px 24px; background: var(--bg-card);
+  border: 1px solid var(--border-subtle); border-radius: 16px;
+  display: flex; align-items: center; gap: 16px;
+  transition: var(--transition-smooth);
+}
+.cert-card:hover { border-color: var(--border-hover); background: var(--bg-card-hover); transform: translateX(4px); }
+.cert-icon {
+  width: 44px; height: 44px; border-radius: 12px;
+  background: rgba(139, 92, 246, 0.1);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.2rem; flex-shrink: 0;
+}
+.cert-name { font-size: 0.95rem; font-weight: 600; margin-bottom: 4px; }
+.cert-issuer { font-size: 0.82rem; color: var(--text-muted); }
+.cert-link {
+  margin-left: auto; flex-shrink: 0;
+  font-size: 0.82rem; font-weight: 500;
+  color: var(--accent-blue); transition: var(--transition-fast);
+  white-space: nowrap;
+}
+.cert-link:hover { color: var(--accent-cyan); transform: translateX(4px); }

@@ -194,21 +194,6 @@ function initSmoothScroll() {
   });
 }
 
-// ==================== CONTACT FORM ====================
-function initContactForm() {
-  const form = document.getElementById('contactForm');
-  if (!form) return;
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const name = document.getElementById('formName').value;
-    const email = document.getElementById('formEmail').value;
-    const message = document.getElementById('formMessage').value;
-    const subject = encodeURIComponent(`Portfolio Contact from ${name}`);
-    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
-    window.location.href = `mailto:krishpatel2136@gmail.com?subject=${subject}&body=${body}`;
-  });
-}
-
 // ==================== PROJECTS CAROUSEL ====================
 class ProjectCarousel {
   constructor() {
@@ -472,7 +457,6 @@ document.addEventListener('DOMContentLoaded', () => {
   new Navbar();
   new ProjectCarousel();
   initSmoothScroll();
-  initContactForm();
 
   // Dynamic year
   const yearEl = document.getElementById('currentYear');

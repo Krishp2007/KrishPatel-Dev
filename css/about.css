@@ -1,0 +1,20 @@
+/* ---------- ABOUT ---------- */
+.about { padding: var(--section-padding); position: relative; }
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-text p { color: var(--text-secondary); margin-bottom: 20px; font-size: 1.05rem; }
+.about-text p strong { color: var(--text-primary); font-weight: 600; }
+
+.about-highlights { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.highlight-tag {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 8px 16px; background: var(--bg-glass);
+  border: 1px solid var(--border-subtle); border-radius: 50px;
+  font-size: 0.85rem; color: var(--text-secondary); transition: var(--transition-fast);
+}
+.highlight-tag:hover { border-color: var(--border-hover); color: var(--accent-blue); }
+.highlight-tag .tag-icon { font-size: 1rem; }
