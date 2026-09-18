@@ -5,6 +5,8 @@ export default function Projects() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [cardsPerView, setCardsPerView] = useState(3);
   const [isPaused, setIsPaused] = useState(false);
+  const [enableTransition, setEnableTransition] = useState(true);
+  const isTransitioningRef = useRef(false);
   const touchStartXRef = useRef(0);
   const totalSlides = projectsData.length;
 
@@ -21,22 +23,68 @@ export default function Projects() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  const prependedClones = projectsData.slice(-cardsPerView);
+  const appendedClones = projectsData.slice(0, cardsPerView);
+  const extendedProjects = [...prependedClones, ...projectsData, ...appendedClones];
+
+  const handleNext = () => {
+    if (isTransitioningRef.current) return;
+    isTransitioningRef.current = true;
+    setEnableTransition(true);
+
+    setCurrentIndex((prev) => {
+      const nextIndex = prev + 1;
+      if (nextIndex >= totalSlides) {
+        setTimeout(() => {
+          setEnableTransition(false);
+          setCurrentIndex(0);
+          setTimeout(() => {
+            setEnableTransition(true);
+            isTransitioningRef.current = false;
+          }, 50);
+        }, 500);
+      } else {
+        setTimeout(() => {
+          isTransitioningRef.current = false;
+        }, 500);
+      }
+      return nextIndex;
+    });
+  };
+
+  const handlePrev = () => {
+    if (isTransitioningRef.current) return;
+    isTransitioningRef.current = true;
+    setEnableTransition(true);
+
+    setCurrentIndex((prev) => {
+      const nextIndex = prev - 1;
+      if (nextIndex < 0) {
+        setTimeout(() => {
+          setEnableTransition(false);
+          setCurrentIndex(totalSlides - 1);
+          setTimeout(() => {
+            setEnableTransition(true);
+            isTransitioningRef.current = false;
+          }, 50);
+        }, 500);
+      } else {
+        setTimeout(() => {
+          isTransitioningRef.current = false;
+        }, 500);
+      }
+      return nextIndex;
+    });
+  };
+
   // Autoplay timer
   useEffect(() => {
     if (isPaused) return;
     const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % totalSlides);
+      handleNext();
     }, 4000);
     return () => clearInterval(interval);
-  }, [isPaused, totalSlides]);
-
-  const handleNext = () => {
-    setCurrentIndex((prev) => (prev + 1) % totalSlides);
-  };
-
-  const handlePrev = () => {
-    setCurrentIndex((prev) => (prev - 1 + totalSlides) % totalSlides);
-  };
+  }, [isPaused, cardsPerView, totalSlides]);
 
   const handleTouchStart = (e) => {
     touchStartXRef.current = e.changedTouches[0].screenX;
@@ -51,8 +99,16 @@ export default function Projects() {
     setTimeout(() => setIsPaused(false), 2000);
   };
 
-  // Calculate position transform percentage
-  const translateX = -(currentIndex * (100 / cardsPerView));
+  const goToDot = (idx) => {
+    if (isTransitioningRef.current) return;
+    setEnableTransition(true);
+    setCurrentIndex(idx);
+  };
+
+  // Calculate position transform percentage based on extended list offset
+  const translateIndex = currentIndex + cardsPerView;
+  const translateX = -(translateIndex * (100 / cardsPerView));
+  const realDisplayIndex = ((currentIndex % totalSlides) + totalSlides) % totalSlides;
 
   return (
     <section className="projects" id="projects">
@@ -78,19 +134,19 @@ export default function Projects() {
               className="carousel-track"
               style={{
                 transform: `translateX(${translateX}%)`,
-                transition: 'transform 0.5s ease-in-out',
+                transition: enableTransition ? 'transform 0.5s ease-in-out' : 'none',
               }}
               onTouchStart={handleTouchStart}
               onTouchEnd={handleTouchEnd}
             >
-              {projectsData.map((project) => (
-                <div className="project-card" key={project.id}>
+              {extendedProjects.map((project, idx) => (
+                <div className="project-card" key={`${project.id}-${idx}`}>
                   <div className="project-content">
                     <h3 className="project-name">{project.name}</h3>
                     <p className="project-description">{project.description}</p>
                     <div className="project-tech">
-                      {project.tech.map((t, idx) => (
-                        <span className="tech-tag" key={idx}>
+                      {project.tech.map((t, tIdx) => (
+                        <span className="tech-tag" key={tIdx}>
                           {t}
                         </span>
                       ))}
@@ -198,15 +254,15 @@ export default function Projects() {
                 <button
                   key={idx}
                   className={`carousel-dot ${
-                    idx === currentIndex ? 'active' : ''
+                    idx === realDisplayIndex ? 'active' : ''
                   } ${isPaused ? 'paused' : ''}`}
-                  onClick={() => setCurrentIndex(idx)}
+                  onClick={() => goToDot(idx)}
                   aria-label={`Go to project ${idx + 1}`}
                 ></button>
               ))}
             </div>
             <span className="carousel-counter" id="carouselCounter">
-              {currentIndex + 1} / {totalSlides}
+              {realDisplayIndex + 1} / {totalSlides}
             </span>
           </div>
         </div>

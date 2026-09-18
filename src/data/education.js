@@ -1,6 +1,6 @@
 export const educationTimeline = [
   {
-    period: 'Nov 2024 — Present',
+    period: 'Aug 2024 — Present',
     title: 'B.Tech Computer Science & Engineering',
     institution: 'LJ Institute of Engineering and Technology',
     location: '📍 Ahmedabad, India',
